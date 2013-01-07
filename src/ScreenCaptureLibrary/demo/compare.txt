@@ -1,0 +1,15 @@
+*** Settings ***
+Library  Screenshot
+Library  Selenium2Library
+
+Suite Setup  Open Browser  http://www.python.org
+Suite Teardown  Close All Browsers
+
+
+*** Test Cases ***
+
+Demonstrate Screenshot Library
+    Take Screenshot Without Embedding  screenshot_library
+
+Demmonstrate Selenium2Library's Screenshot Capabilities
+    Capture Page Screenshot  screenshot_sel2lib.png

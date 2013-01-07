@@ -1,0 +1,14 @@
+*** Settings ***
+Library  Selenium2Library
+Library  ScreenCaptureLibrary
+
+Suite Setup  Start Browser
+Suite Teardown  Close All Browsers
+
+*** Test Cases ***
+Hello World
+    Take screenshot
+
+*** Keywords ***
+Start Browser
+    Open browser  http://www.plone.org

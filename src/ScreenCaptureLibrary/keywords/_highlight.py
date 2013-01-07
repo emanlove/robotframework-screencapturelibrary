@@ -29,3 +29,8 @@ class HighlightKeywords(object):
         """
 
         pass
+    def highlight_text():
+        """
+        """
+
+        pass

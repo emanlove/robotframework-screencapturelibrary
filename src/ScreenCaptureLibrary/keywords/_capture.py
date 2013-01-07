@@ -1,5 +1,11 @@
 class CaptureKeywords(object):
 
+    def take_screenshot(self, *args):
+        """
+        """
+
+        print "Hello World"
+        
     def capture_region(self):
         """
         """
