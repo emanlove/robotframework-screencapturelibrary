@@ -15,12 +15,12 @@ Other Robot Framework Libraries required
 This library will "extend" or use functionality from the `Selenium2Library <https://github.com/rtomac/robotframework-selenium2library>`_. There is also a Robot Framework library, `Screenshot Built-In Library <http://robotframework.googlecode.com/hg/doc/libraries/Screenshot.html>`_, for taking a screenshoot of the entire screen.
 
 
-General format
---------------
-The general format of the commands goes something like
+General format of screen capture keyword
+---------------------------------------
+The general format of the screen capture command goes something like
 
 Take screenshot [of <element or screenarea>
-                 from <element> down|right|up|left [to <element>]
+                 from <element> down|right|up|left [of/to <element>]
                  add <drawing object>
 		 obscuring <element>
 		 (saving) as
@@ -28,7 +28,13 @@ Take screenshot [of <element or screenarea>
                  but excluding
                  and including
 		 
-Create Screen Area  [union]
+Other keywords
+--------------
+Other (conceptual) keywords which will provide functionality
+
+Create Screen Area  [union of elements]
+
+Set screencast debug  on/off
 
 
 Example "keywords"
