@@ -4,19 +4,36 @@ Reason: The motivation for and the end goal of this library is to be able to rep
 
 
 Features I would like to see:
+-----------------------------
 
 - Output to various image formats including GIMP xcf format and/or SVG so various objects (like arrows, labels, etc. can be easily post-manipulated.
 - Debug keyword which takes multiple screenshots as keyword narrows down area
 
+
 Other Robot Framework Libraries required
 ----------------------------------------
-Selenium2Library
-Screenshot Built-In Library
+This library will "extend" or use functionality from the `Selenium2Library <https://github.com/rtomac/robotframework-selenium2library>`_. There is also a Robot Framework library, `Screenshot Built-In Library <http://robotframework.googlecode.com/hg/doc/libraries/Screenshot.html>`_, for taking a screenshoot of the entire screen.
 
-http://robotframework.googlecode.com/hg/doc/libraries/Screenshot.html
 
-Sample keywords (using figures from "A User's Guide to Plone 4" as goal
----------------
+General format
+--------------
+The general format of the commands goes something like
+
+Take screenshot [of <element or screenarea>
+                 from <element> down|right|up|left [to <element>]
+                 add <drawing object>
+		 obscuring <element>
+		 (saving) as
+
+                 but excluding
+                 and including
+		 
+Create Screen Area  [union]
+
+
+Example "keywords"
+------------------
+Presented here are sample examples of "keywords" using figures from "A User's Guide to Plone 4" as a goal.  The "keywords" are not an exact word-for-word Robot Framework keyword but a sketch of what I am trying to achieve.
 
 Figure 2.1
 
@@ -70,20 +87,3 @@ Figure 2.10
 Figure 2.11
 
     Take screenshot of news_item-base-edit
-General format
---------------
-
-Take screenshot [of/from]
-
-The general format of the command goes like
-
-Take screenshot [of <element or screenarea>
-                 from <element> down|right|up|left [to <element>]
-                 add <drawing object>
-		 obscuring <element>
-		 (saving) as
-
-                 but excluding
-                 and including
-		 
-create screen area  [union]
