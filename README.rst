@@ -1,6 +1,10 @@
 Robot Framework library for capturing screenshots and image manipulation for the purpose of documentation.
 
-Reason: The motivation for and the end goal of this library is to be able to reproduce the images or screenshots within manual "A User's Guide to Plone 4". By combining Plone's use of Robot Framework and Selenium for testing one should be able to automate both screen captures and various elements or parts of the Plone UI for documentation.
+Reason for another capture screenshot keyword/library:
+------------------------------------------------------
+The motivation for and the end goal of this library is to be able to reproduce the images or screenshots within manual "A User's Guide to Plone 4". By combining Plone's use of Robot Framework and Selenium for testing one should be able to automate both screen captures and various elements or parts of the Plone UI for documentation.
+
+The advantage this library is trying to gain over the current Capture Screenshot keyword is the automation of the cropping, enhancing and annotating of screenshots given that while we are within selenium we can extract information about where elements are. So if the template changes or is styled differently the screenshot along with annotations and enhancements can easily be redone. With an optional layered output format like svg where each enhancement or cropping step is included in the output format an editor could come through and make minor tweaks to the marked up screenshot. 
 
 
 Features I would like to see:
