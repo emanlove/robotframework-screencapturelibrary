@@ -24,9 +24,10 @@ General format of screen capture keyword
 The general format of the screen capture command goes something like
 
 Take screenshot [of <element or screenarea>
-                 from <element> down|right|up|left [of/to <element>]
+                 from <element> down|right|up|left [of/past/to <element>]
                  add <drawing object>
 		 obscuring <element>
+		 numbering <element> [as <integer or letter>]
 		 (saving) as
 
                  but excluding
