@@ -7,8 +7,8 @@ Suite Teardown  Close All Browsers
 
 *** Test Cases ***
 Hello World
-    Take screenshot
+    Take screenshot  of id="gbx3"
 
 *** Keywords ***
 Start Browser
-    Open browser  http://www.plone.org
+    Open browser  https://www.google.com/
