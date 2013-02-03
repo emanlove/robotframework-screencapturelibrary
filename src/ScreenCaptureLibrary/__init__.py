@@ -1,12 +1,16 @@
 from keywords import *
+from robot.libraries.BuiltIn import BuiltIn
 
 class ScreenCaptureLibrary (
-    _CaptureKeywords):
+    _CaptureKeywords,
+    _ScreenAreaKeywords):
     """
     """
 
-    def init(self):
+    ROBOT_LIBRARY_SCOPE = 'GLOBAL'
+
+    def __init__(self):
         """
         """
 
-        pass
+        self._sel2lib = BuiltIn().get_library_instance('Selenium2Library')
