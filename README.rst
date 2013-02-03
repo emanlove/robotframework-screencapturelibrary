@@ -32,6 +32,7 @@ Take screenshot [of <element or screenarea>
 
                  but excluding
                  and including
+
 		 
 Other keywords
 --------------
@@ -42,6 +43,47 @@ Create Screen Area  [union of elements]
 Set screencast debug  on/off
 
 
+Parser
+------
+Given the general format of the 'take screenshot' keyword or as in this example
+
+    | Take screenshot | of id=header|
+    | ... | from <element> down|right|up|left [of/past/to <element>]
+    | ... | add <drawing object>
+    | ... | obscuring <element>
+    | ... | (saving) as <filename>
+
+the parser should seperate out a SENTENCE from the SENTANCES or arguments of the keywords. Each argument should be it's own SENTENCE and no single SENTENCE should be broken into seperate keyword arguments. Each SENTENCE should start with an ACTION (of, from, add, obscuring, as). Some ACTIONs help define the screenarea (of, from) while other ACTION(s) help to annotate the screenshot (add) and still other ACTION(s) enhance parts of the screenarea (obscuring) or used for defining the filename of the screenshot (as).
+
+A single SENTENCE should be allowed to contain multiple ACCTIONs within itself. For example 
+
+    | Take screenshot | of <element> adding <drawing object>
+
+contains a single SENTENCE ('of <element> adding <drawing object>') but two ACTIONS and their corresponding object; one being 'of <element>' and the other 'adding <drawing object>'.
+
+ACTIONs should be allowed to be in either present tense (Example: obscure) or present progressive tense (Example: obscuring) and these two should be considered the same ACTION. The define filename ACTION 'as' can also written as 'save as' or 'saving as' using present tense and present progressive tense respectively; in other words the 'save/saving' part is optional.
+
+
+Screenarea references
+---------------------
+SVG
+  <polygon points="points-specifications"/>
+  example: <polygon points="0,0 5,0 5,5 0,5"/>
+  units: 
+  inside/outside path: clockwise path to make area inside
+
+CSS
+  http://www.w3.org/TR/CSS2/visuren.html
+
+PIL
+  region is defined by a 4-tuple, where coordinates are (left, upper, right, lower)
+  coordinate system with (0, 0) in the upper left corner
+
+svgwrite 
+  a point is a 2-tuple (x, y): x, y = <number>
+  All coordinate values are in the user coordinate system (no units allowed)
+
+  
 Example "keywords"
 ------------------
 Presented here are sample examples of "keywords" using figures from "A User's Guide to Plone 4" as a goal.  The "keywords" are not an exact word-for-word Robot Framework keyword but a sketch of what I am trying to achieve.
