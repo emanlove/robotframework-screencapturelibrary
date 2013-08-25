@@ -63,6 +63,9 @@ contains a single SENTENCE ('of <element> adding <drawing object>') but two ACTI
 
 ACTIONs should be allowed to be in either present tense (Example: obscure) or present progressive tense (Example: obscuring) and these two should be considered the same ACTION. The define filename ACTION 'as' can also written as 'save as' or 'saving as' using present tense and present progressive tense respectively; in other words the 'save/saving' part is optional.
 
+Alternative Method
+------------------
+`Asko`_ `Soukka`_ (`@datakurre`_) has presented a different model; one which doesn't rely on modifying or replacing the underlying parser. His work is part of `plone.app.robotframework`_ which is the Robot Framework toolset to help test Plone CMS. The majority of the annotation functionality is built using Robot Framework keywords (see `annotate.robot`_) while image croping is provided by a python function using PIL (see `annotate.py`_). This is different from the model I envisioned and outlined here but provides a solid model with several advantages over my model.
 
 Screenarea references
 ---------------------
@@ -140,3 +143,10 @@ Figure 2.10
 Figure 2.11
 
     Take screenshot of news_item-base-edit
+
+:: _Asko: http://datakurre.pandala.org/
+:: _Soukka: https://twitter.com/datakurre
+:: _@datakurre: https://github.com/datakurre
+:: _plone.app.robotframework: https://github.com/plone/plone.app.robotframework
+:: _annotate.robot: https://github.com/plone/plone.app.robotframework/blob/master/src/plone/app/robotframework/annotate.robot
+:: _annotate.py: https://github.com/plone/plone.app.robotframework/blob/master/src/plone/app/robotframework/annotate.py
